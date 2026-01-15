@@ -4,7 +4,7 @@
     padding: 0;
 
     --bg-light: #fff;
-    --bg-light-second: #e9e9e9;
+    --bg-light-second: #f3f3f3;
 
     --fg-light: #fff;
 
@@ -15,144 +15,121 @@ html {
     font-family: Roboto, sans-serif;
 }
 
+
 ul {
-    list-style: none;
+    list-style-type: none;
 }
 
 a {
     text-decoration: none;
+    font-weight: inherit;
     font-family: inherit;
     font-size: inherit;
-    font-weight: inherit;
-    color: inherit
-}
-
-.pfp {
-    --size: 42px;
-    width: var(--size);
-    height: var(--size);
-    border-radius: 50%;
+    color: inherit;
 }
 
 body {
     min-height: 100vh;
-    background-color: var(--bg-light-second);
 
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 4.5fr;
     grid-template-rows: 1fr 5fr;
-
-    --padding: 2rem;
-    
 }
 
+body > * {
+    /* border: 1px solid; */
+    padding: 1rem;
+}
 
 header {
     grid-area: 1 / 2 / 2 / -1;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: var(--padding);
-    background-color: var(--bg-light);
-    box-shadow: 2px 0 13px 2px #ccc;
-    gap: 2rem;
+    padding: 3rem;
 }
 
-header > div {
+header > div:first-child,
+header > div:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header > div:first-child > div,
-header > div:last-child > div {
+header > div:first-child > *,
+header > div:last-child > * {
     display: flex;
-    align-items: center;
     gap: 1rem;
-}
-
-header > div:first-child > div:first-child input {
-    padding: 0.8em 1em;
-    border: none;
-    background-color: var(--bg-light-second);
-    width: 120ch;
-    border-radius: 18px;
-}
-
-
-header > div:first-child > div:last-child .name {
-    font-weight: bold;
-}
-
-header > div:last-child > div:first-child .pfp {
-    --size: 64px;
-}
-
-header > div:last-child > div:first-child .name {
-    display: flex;
-    flex-direction: column;
-    font-weight: 700;
-}
-
-header > div:last-child > div:first-child .name > :last-child {
-    font-size: 1.8rem;
-}
-
-header > div:last-child > div:last-child {
-    display: flex;
-    gap: 2rem;
-}
-
-header > div:last-child > div:last-child button {
-    padding-block: 0.8em;
-    width: 16ch;
-    border: none;
-    background-color: var(--accent);
-    color: var(--fg-light);
-    font-weight: 600;
-    border-radius: 18px;
+    align-items: center;
 }
 
 nav {
     grid-area: 1 / 1 / -1 / 2;
-    padding: var(--padding) calc(var(--padding) - 1.5rem);
-    background-color: var(--accent);
-
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    
-
 }
-
-nav a {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--fg-light);
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-
-nav a > :first-child {
-    width: 48px;
-    height: 48px;
-    display: grid;
-    place-content: center;
-}
-
 
 main {
-    grid-area: 2 / 2;
+    --card-b-rad: 14px;
+
+    grid-area: 2 / 2 / -1 / -1;
 
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 1fr;
 
-    padding: var(--padding);
+    background-color: var(--bg-light-second);
+
 }
 
-main > .main-content {
-    grid-area: 1 / 1 / 3 / 2;
+main .heading {
+    margin-bottom: 1rem;
+}
+
+main > * {
+    /* border: 1px solid #333; */
+    padding: 1rem;
+}
+
+main > .projects {
+    grid-area: 1 / 1 / -1 / -2;
+}
+
+main > .projects > .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    grid-auto-rows: 291px;
+    gap: 2rem;
+}
+
+main > .projects > .list > li {
+    background-color: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: var(--card-b-rad);
+}
+
+main > .announcements {
+    grid-area: 1 / 2 / 2 / -1;
+}
+
+
+main > .announcements {
+    font-size: 0.95rem;
+}
+
+main > .announcements > .list {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: var(--card-b-rad);
+}
+
+
+
+main > .trending {
+    grid-area: 2 / 2;
+}
+
+main > .trending > .list {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: var(--card-b-rad);
 }
