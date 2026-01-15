@@ -5,12 +5,20 @@
 
 }
 
+html {
+    font-family: Roboto, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
 
 a {
     text-decoration: none;
     color: inherit;
     font-family: inherit;
     font-weight: inherit;
+    font-size: inherit;
 }
 
 .icon-sm {
@@ -24,39 +32,48 @@ body {
 
     display: grid;
     grid-template-columns: 1fr 4.5fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 3.5fr;
 }
 
 body > * {
     border: 1px solid;
-    padding: 1.5rem 2rem;
+    padding: 0 2rem;
 }
 
 header {
     grid-area: 1 / 2 / 2 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-inline: 3.5rem;
 }
 
-header .top-header {
+header .top-header, header .bottom-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-header .top-header > * {
+header .top-header > *, header .bottom-header > * {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
 
-.profile-sm {
+.profile-sm, .profile-md {
     --size: 48px;
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
 }
 
+.profile-md {
+    --size: 72px;
+}
+
 header .top-header:first-child input{
-    padding: 0.5em 1em;
-    width: 75ch;
+    padding: 0.8em 1em;
+    width: 120ch;
     border: none;
     background-color: #ebe6e6;
     border-radius: 16px;
@@ -64,6 +81,27 @@ header .top-header:first-child input{
 
 header .top-header:first-child input:focus {
     background-color: #fff;
+}
+
+header .bottom-header .name {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+header .bottom-header .name > *:last-child {
+    font-size: 2rem;
+}
+
+header .bottom-header .buttons button{
+    padding: 1em 0;
+    border: none;
+    width: 14ch;
+    border-radius: 24px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: rgb(107, 134, 241);
 }
 
 nav {
