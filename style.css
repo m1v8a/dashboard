@@ -4,7 +4,7 @@
     padding: 0;
 
     --bg-light: #fff;
-    --bg-light-second: #f3f3f3;
+    --bg-light-second: #eeeeee;
 
     --fg-light: #fff;
 
@@ -28,6 +28,17 @@ a {
     color: inherit;
 }
 
+p {
+    line-height: 1.5;
+}
+
+.pfp {
+    --size: 48px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+}
+
 body {
     min-height: 100vh;
 
@@ -48,6 +59,8 @@ header {
     flex-direction: column;
     justify-content: space-between;
     padding: 3rem;
+    box-shadow: 2px 0px 8px 2px #ccc;
+    z-index: 1;
 }
 
 header > div:first-child,
@@ -64,17 +77,103 @@ header > div:last-child > * {
     align-items: center;
 }
 
+header > div:first-child > div:first-child > input {
+    padding: 0.8em 1em;
+    width: 115ch;
+    border: none;
+    border-radius: 24px;
+    background-color: var(--bg-light-second);
+}
+
+header > div:first-child > div:first-child input:focus {
+    background-color: #fff;
+}
+
+header > div:first-child > div:last-child {
+    gap: 2rem;
+}
+
+header > div:first-child > div:last-child .name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header > div:last-child > div:first-child .pfp {
+    --size: 64px;
+}
+
+header > div:last-child > div:first-child .name{
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+header > div:last-child > div:first-child .name > p{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+header > div:last-child > div:last-child {
+    display: flex;
+    gap: 4rem;
+}
+
+header > div:last-child > div:last-child button {
+    padding: 1em 0;
+    width: 15ch;
+    border: none;
+    border-radius: 24px;
+    font-weight: bold;
+    background-color: var(--accent);
+    color: var(--fg-light);
+}
+
 nav {
     grid-area: 1 / 1 / -1 / 2;
+
+    background-color: var(--accent);
+    color: var(--fg-light);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    z-index: 2;
+}
+
+nav > h1 > a  > div > img {
+    width: 48px;
+    height: auto;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+nav ul a {
+    font-size: 1.1rem;
+}
+
+nav a > div {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-content: center;
+}
+
+nav a > div img {
+    width: 24px;
 }
 
 main {
     --card-b-rad: 14px;
+    --card-shadow: 2px 2px 12px 2px #ccc;
 
     grid-area: 2 / 2 / -1 / -1;
 
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
 
     background-color: var(--bg-light-second);
@@ -97,7 +196,7 @@ main > .projects {
 main > .projects > .list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
-    grid-auto-rows: 291px;
+    grid-auto-rows: 293px;
     gap: 2rem;
 }
 
@@ -105,31 +204,75 @@ main > .projects > .list > li {
     background-color: var(--bg-light);
     padding: 2.5rem;
     border-radius: var(--card-b-rad);
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: var(--card-b-rad) solid rgb(200, 143, 36)
 }
+
+main > .projects > .list > li h3 {
+    line-height: 2;
+}
+
+main > .projects > .list > li p{
+    color: #555;
+}
+
+main > .projects > .list > li > div:last-child {
+    align-self: end;
+    display: flex;
+    gap: 2rem;
+}
+
+
+main > .announcements > .list,
+main > .trending > .list {
+    background-color: var(--bg-light);
+    border-radius: var(--card-b-rad);
+    box-shadow: var(--card-shadow);
+    padding: 2.43rem;
+}
+
 
 main > .announcements {
     grid-area: 1 / 2 / 2 / -1;
 }
 
-
-main > .announcements {
-    font-size: 0.95rem;
+main > .announcements > .list,
+main > .trending > .list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-main > .announcements > .list {
-    background-color: var(--bg-light);
-    padding: 2rem;
-    border-radius: var(--card-b-rad);
+main > .announcements > .list > li {
+    font-size: 0.8rem;
+    padding-bottom: 2rem;
 }
 
+main > .announcements > .list li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+main > .announcements > .list > li h3{
+    line-height: 1.5;
+}
+
+main > .announcements > .list > li p,
+main > .trending > .list li span {
+    line-height: unset;
+    color: #555;
+}
 
 
 main > .trending {
     grid-area: 2 / 2;
 }
 
-main > .trending > .list {
-    background-color: var(--bg-light);
-    padding: 2rem;
-    border-radius: var(--card-b-rad);
+main > .trending > .list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
+
