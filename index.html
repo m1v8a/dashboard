@@ -16,29 +16,34 @@
 
 <body>
     <header>
-        <div class="top-header">
-            <div class="search-input">
-                <img class="icon-sm" width="24" height="24" src="./asset/icons/search_icon.svg" alt="">
+        <div>
+            <div>
+                <img width="32" height="32" src="./asset/icons/search_icon.svg" alt="search icon">
                 <input type="search">
             </div>
-            <div class="profile-nav">
-                <a href="#"><img class="icon-sm" width="24" height="24" src="./asset/icons/bell.svg"
-                        alt="notifications"></a>
-                <a href="#"><img class="profile-sm" width="24" height="24" src="./asset/images/main_profile.jpg"
-                        alt="profile-picture"></a>
-                <a href="#">Morgan Oakley</a>
+            <div>
+                <a href="#">
+                    <img width="32" height="32" src="./asset/icons/bell.svg" alt="notification icon">
+                </a>
+                <a href="#">
+                    <img class="pfp" width="32" height="32" src="./asset/images/main_profile.jpg"
+                        alt="notification icon">
+                </a>
+                <a class="name" href="#">Morgan Oakley</a>
             </div>
         </div>
-        <div class="bottom-header">
-            <div class="profile-nav">
-                <img class="profile-md" width="32" height="32" src="./asset/images/main_profile.jpg"
-                    alt="profile picture">
-                <p class="name">
+        <div>
+            <div>
+                <a href="#">
+                    <img class="pfp" width="32" height="32" src="./asset/images/main_profile.jpg"
+                        alt="notification icon">
+                </a>
+                <a class="name" href="#">
                     <span>Hi there,</span>
-                    <a href="#">Morgan Oakley (@morgan)</a>
-                </p>
+                    <p>Morgan Oakley</p>
+                </a>
             </div>
-            <div class="buttons">
+            <div>
                 <button>New</button>
                 <button>Upload</button>
                 <button>Share</button>
@@ -46,61 +51,62 @@
         </div>
     </header>
     <nav>
-        <div class="logo">
+        <h1>
             <a href="#">
                 <div>
-                    <img class="icon" width="24" height="24" src="./asset/icons/view-dashboard.svg" alt="">
+                    <img class="logo" width="32" height="32" src="./asset/icons/view-dashboard.svg" alt="">
                 </div>
-                <h1>Dashboard</h1>
+                <span>Dashboard</span>
             </a>
-        </div>
-        <ul class="main-links">
+        </h1>
+
+        <ul>
             <li>
                 <a href="#">
                     <div>
-                        <img width="24" height="24" src="./asset/icons/home.svg" alt="">
+                        <img width="32" height="32" src="./asset/icons/home.svg" alt="">
                     </div>
-                    <p>Home</p>
+                    <span>Home</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <div>
-                        <img width="24" height="24" src="./asset/icons/card-account-details.svg" alt="">
+                        <img width="32" height="32" src="./asset/icons/card-account-details.svg" alt="">
                     </div>
-                    <p>Profile</p>
+                    <span>Profile</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <div>
-                        <img width="24" height="24" src="./asset/icons/message-reply.svg" alt="">
+                        <img width="32" height="32" src="./asset/icons/message-reply.svg" alt="">
                     </div>
-                    <p>Messages</p>
+                    <span>Messages</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <div>
-                        <img width="24" height="24" src="./asset/icons/clock-time-three.svg" alt="">
+                        <img width="32" height="32" src="./asset/icons/clock-time-three.svg" alt="">
                     </div>
-                    <p>History</p>
+                    <span>History</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <div>
-                        <img width="24" height="24" src="./asset/icons/note-multiple.svg" alt="">
+                        <img width="32" height="32" src="./asset/icons/note-multiple.svg" alt="">
                     </div>
-                    <p>Tasks</p>
+                    <span>Tasks</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <div>
-                        <img width="24" height="24" src="./asset/icons/account-group.svg" alt="">
+                        <img width="32" height="32" src="./asset/icons/account-group.svg" alt="">
                     </div>
-                    <p>Communities</p>
+                    <span>Communities</span>
                 </a>
             </li>
         </ul>
@@ -108,226 +114,206 @@
             <li>
                 <a href="#">
                     <div>
-                        <img width="24" height="24" src="./asset/icons/cog.svg" alt="">
+                        <img width="32" height="32" src="./asset/icons/cog.svg" alt="">
                     </div>
-                    <p>Settings</p>
+                    <span>Settings</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <div>
-                        <img width="24" height="24" src="./asset/icons/help-box.svg" alt="">
+                        <img width="32" height="32" src="./asset/icons/help-box.svg" alt="">
                     </div>
-                    <p>Support</p>
+                    <span>Support</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <div>
-                        <img width="24" height="24" src="./asset/icons/shield-check.svg" alt="">
+                        <img width="32" height="32" src="./asset/icons/shield-check.svg" alt="">
                     </div>
-                    <p>Privacy</p>
+                    <span>Privacy</span>
                 </a>
             </li>
         </ul>
     </nav>
     <main>
-        <div class="main-content">
+        <section class="projects">
             <h2 class="heading">Your Projects</h2>
-            <ul class="card-list">
+            <ul class="list">
                 <li>
-                    <article class="card">
-                        <div class="card-text">
-                            <h3 class="card-heading">Super Cool Project</h3>
-                            <p class="card-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Recusandae eligendi incidunt placeat aut cupiditate molestiae illo nisi natus,
-                                laudantium ad.</p>
-                        </div>
-                        <div class="card-options">
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/star-plus-outline.svg"
-                                    alt="give a start">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/eye-plus-outline.svg"
-                                    alt="view the project">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/source-fork.svg" alt="fork the project">
-                            </a>
-                        </div>
-                    </article>
+                    <div>
+                        <h3>Super Cool Project</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam eveniet ipsa magni,
+                            repellendus aspernatur vel.</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/star-plus-outline.svg" alt="Give star">
+                        </a>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/eye-plus-outline.svg" alt="View project">
+                        </a>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/source-fork.svg" alt="Fork project">
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    <article class="card">
-                        <div class="card-text">
-                            <h3 class="card-heading">Super Cool Project</h3>
-                            <p class="card-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Recusandae eligendi incidunt placeat aut cupiditate molestiae illo nisi natus,
-                                laudantium ad.</p>
-                        </div>
-                        <div class="card-options">
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/star-plus-outline.svg"
-                                    alt="give a start">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/eye-plus-outline.svg"
-                                    alt="view the project">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/source-fork.svg" alt="fork the project">
-                            </a>
-                        </div>
-                    </article>
+                    <div>
+                        <h3>Less Cool Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis assumenda natus voluptate
+                            asperiores architecto. Dicta optio rerum quis asperiores maxime non eius error obcaecati,
+                            consequuntur, laboriosam aliquid distinctio, rem hic.</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/star-plus-outline.svg" alt="Give star">
+                        </a>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/eye-plus-outline.svg" alt="View project">
+                        </a>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/source-fork.svg" alt="Fork project">
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    <article class="card">
-                        <div class="card-text">
-                            <h3 class="card-heading">Super Cool Project</h3>
-                            <p class="card-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Recusandae eligendi incidunt placeat aut cupiditate molestiae illo nisi natus,
-                                laudantium ad.</p>
-                        </div>
-                        <div class="card-options">
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/star-plus-outline.svg"
-                                    alt="give a start">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/eye-plus-outline.svg"
-                                    alt="view the project">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/source-fork.svg" alt="fork the project">
-                            </a>
-                        </div>
-                    </article>
+                    <div>
+                        <h3>Impossible App</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem neque nihil consectetur
+                            inventore ratione, repellendus magnam cupiditate dolorum!</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/star-plus-outline.svg" alt="Give star">
+                        </a>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/eye-plus-outline.svg" alt="View project">
+                        </a>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/source-fork.svg" alt="Fork project">
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    <article class="card">
-                        <div class="card-text">
-                            <h3 class="card-heading">Super Cool Project</h3>
-                            <p class="card-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Recusandae eligendi incidunt placeat aut cupiditate molestiae illo nisi natus,
-                                laudantium ad.</p>
-                        </div>
-                        <div class="card-options">
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/star-plus-outline.svg"
-                                    alt="give a start">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/eye-plus-outline.svg"
-                                    alt="view the project">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/source-fork.svg" alt="fork the project">
-                            </a>
-                        </div>
-                    </article>
+                    <div>
+                        <h3>Easy Peasy App</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse aperiam necessitatibus, eius
+                            temporibus mollitia tempora sed, debitis autem, placeat culpa nam inventore accusamus libero
+                            repellendus. Ratione ad, eligendi ex atque ab repellendus eius nostrum? Repudiandae.</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/star-plus-outline.svg" alt="Give star">
+                        </a>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/eye-plus-outline.svg" alt="View project">
+                        </a>
+                        <a href="#">
+                            <img width="32" height="32" src="./asset/icons/source-fork.svg" alt="Fork project">
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    <article class="card">
-                        <div class="card-text">
-                            <h3 class="card-heading">Super Cool Project</h3>
-                            <p class="card-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Recusandae eligendi incidunt placeat aut cupiditate molestiae illo nisi natus,
-                                laudantium ad.</p>
-                        </div>
-                        <div class="card-options">
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/star-plus-outline.svg"
-                                    alt="give a start">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/eye-plus-outline.svg"
-                                    alt="view the project">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/source-fork.svg" alt="fork the project">
-                            </a>
-                        </div>
-                    </article>
+                    <div>
+                        <h3>Ad Blocker</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia sit, cupiditate
+                            illum ex voluptas accusantium incidunt facere, commodi unde, quas totam laborum!</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img width="32" src="./asset/icons/star-plus-outline.svg" alt="Give star">
+                        </a>
+                        <a href="#">
+                            <img width="32" src="./asset/icons/eye-plus-outline.svg" alt="View project">
+                        </a>
+                        <a href="#">
+                            <img width="32" src="./asset/icons/source-fork.svg" alt="Fork project">
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    <article class="card">
-                        <div class="card-text">
-                            <h3 class="card-heading">Super Cool Project</h3>
-                            <p class="card-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Recusandae eligendi incidunt placeat aut cupiditate molestiae illo nisi natus,
-                                laudantium ad.</p>
-                        </div>
-                        <div class="card-options">
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/star-plus-outline.svg"
-                                    alt="give a start">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/eye-plus-outline.svg"
-                                    alt="view the project">
-                            </a>
-                            <a href="#">
-                                <img width="24" height="24" src="./asset/icons/source-fork.svg" alt="fork the project">
-                            </a>
-                        </div>
-                    </article>
+                    <div>
+                        <h3>Money Maker</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia sit, cupiditate
+                            illum ex voluptas accusantium incidunt facere, commodi unde, quas totam laborum!</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img width="32" src="./asset/icons/star-plus-outline.svg" alt="Give star">
+                        </a>
+                        <a href="#">
+                            <img width="32" src="./asset/icons/eye-plus-outline.svg" alt="View project">
+                        </a>
+                        <a href="#">
+                            <img width="32" src="./asset/icons/source-fork.svg" alt="Fork project">
+                        </a>
+                    </div>
                 </li>
             </ul>
-        </div>
+        </section>
         <aside class="announcements">
             <h2 class="heading">Announcements</h2>
-            <ul class="announcements-list">
+            <ul class="list">
                 <li>
-                    <h3 class="announcement-heading">Site Maintenance</h3>
-                    <p class="announcement-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-                        eveniet esse laborum deleniti in reiciendis.</p>
+                    <h3>Site Maintenance</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores necessitatibus
+                        assumenda voluptates autem possimus dolor animi provident totam ullam.</p>
                 </li>
                 <li>
-                    <h3 class="announcement-heading">Community Share Day</h3>
-                    <p class="announcement-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-                        eveniet esse laborum deleniti in reiciendis.</p>
+                    <h3>Community Share Day</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores necessitatibus
+                        assumenda voluptates autem possimus dolor animi provident totam ullam.</p>
                 </li>
                 <li>
-                    <h3 class="announcement-heading">Update Privacy Policy</h3>
-                    <p class="announcement-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-                        eveniet esse laborum deleniti in reiciendis.</p>
+                    <h3>Update Privacy Policy</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores necessitatibus
+                        assumenda voluptates autem possimus dolor animi provident totam ullam.</p>
                 </li>
             </ul>
         </aside>
-        <aside>
+        <aside class="trending">
             <h2 class="heading">Trending</h2>
-            <ul class="trending-list">
+            <ul class="list">
                 <li>
-                    <img width="24" height="24" src="./asset/images/main_profile.jpg" alt="">
-                    <p>
-                        <span>@tegan</span>
-                        <span>World Peace Builder</span>
-                    </p>
+                    <div>
+                        <img class="pfp" width="32" src="./asset/images/main_profile.jpg" alt="profile picture">
+                    </div>
+                    <div>
+                        <p>@tegan</p>
+                        <span>World Piece Builder</span>
+                    </div>
                 </li>
                 <li>
-                    <img width="24" height="24" src="./asset/images/main_profile.jpg" alt="">
-                    <p>
-                        <span>@morgan</span>
+                    <div>
+                        <img class="pfp" width="32" src="./asset/images/main_profile.jpg" alt="profile picture">
+                    </div>
+                    <div>
+                        <p>@morgan</p>
                         <span>Super Cool Project</span>
-                    </p>
+                    </div>
                 </li>
                 <li>
-                    <img width="24" height="24" src="./asset/images/main_profile.jpg" alt="">
-                    <p>
-                        <span>@kendall</span>
+                    <div>
+                        <img class="pfp" class="pfp" width="32" src="./asset/images/main_profile.jpg" alt="profile picture">
+                    </div>
+                    <div>
+                        <p>@kendall</p>
                         <span>Life Changing App</span>
-                    </p>
+                    </div>
                 </li>
                 <li>
-                    <img width="24" height="24" src="./asset/images/main_profile.jpg" alt="">
-                    <p>
-                        <span>@alex</span>
+                    <div>
+                        <img class="pfp" width="32" src="./asset/images/main_profile.jpg" alt="profile picture">
+                    </div>
+                    <div>
+                        <p>@alex</p>
                         <span>No Traffic Maker</span>
-                    </p>
+                    </div>
                 </li>
             </ul>
-        <aside>
+        </aside>
     </main>
 </body>
 
